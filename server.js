@@ -4,16 +4,12 @@ const PORT = 3000;
 
 app.use(express.json());
 
-let users = [];
-
-app.get('/productos',(req,res)=>{
-    
-    res.json({"id":1,"nombre":"laptop","precio":1200});
+app.get('/api/categorias',(req,res)=>{
+    res.json({"id":1, "nombre":"Electronica"});
 });
 
-app.get('/usuarios',(req,res)=>{
-    
-    res.json({"id":1,"nombre":"Nestor","email":"nestor@gmail.com"});
+app.get('/api/pedidos',(req,res)=>{
+    res.json({"id":1, "usuario":"Juan", "Total":500});
 });
 
 app.listen(PORT, ()=>{
